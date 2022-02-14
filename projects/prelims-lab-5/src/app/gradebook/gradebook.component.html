@@ -1,0 +1,85 @@
+<div id="app">
+  <div class="row align-items-start">
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Grade Book</h5><hr>
+          <p class="card-text">Enter your name, subject, and grades.</p>
+          <!-- Name Input -->
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" 
+              [(ngModel)]="student" id="name" 
+              placeholder="name"/>
+            <label for="name">Name of Student</label>
+          </div>
+          <!-- Subject -->
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control"
+              [(ngModel)]="subject" id="subject" 
+              placeholder="99"/>
+            <label for="subject">Subject</label>
+          </div>
+          <p>Grades:</p>
+          <!-- Grades Input -->
+          <div class="form-floating mb-2">
+            <!-- Prelims -->
+            <input type="number" class="form-control" 
+              [(ngModel)]="prelims" id="prelims" 
+              placeholder="99"/>
+            <label for="prelims">Prelims</label>
+          </div>
+          <div class="form-floating mb-2">
+            <!-- Midterms -->
+            <input type="number" class="form-control"
+              [(ngModel)]="midterms" id="midterms" 
+              placeholder="99"/>
+            <label for="midterms">Midterms</label>
+          </div>
+          <div class="form-floating mb-2">
+            <!-- Finals -->
+            <input type="number" class="form-control"
+              [(ngModel)]="finals" id="finals" 
+              placeholder="99"/>
+            <label for="finals">Finals</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- OUTPUT CARD -->
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Output</h5><hr>
+          <p class="card-text">Hello, {{student}}!</p>
+          <p>Below are your grades for {{subject}}</p>
+          <!-- Grades Input -->
+          <div class="form-floating mb-3">
+            <!-- Prelims -->
+            <input type="number" class="form-control" id="prelims" 
+              [value]="prelims" placeholder="99" disabled readonly/>
+            <label for="prelims">Prelims</label>
+          </div>
+          <div class="form-floating mb-3">
+            <!-- Midterms -->
+            <input type="number" class="form-control" id="midterms" 
+              [value]="midterms" placeholder="99" disabled readonly/>
+            <label for="midterms">Midterms</label>
+          </div>
+          <div class="form-floating mb-3">
+            <!-- Finals -->
+            <input type="number" class="form-control" id="finals" 
+              [value]="finals" placeholder="99" disabled readonly/>
+            <label for="finals">Finals</label>
+          </div>
+          <!-- Computed Grade Point Average -->
+          <p>Computing your grades to get your average for {{subject}}..</p>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="average" 
+              [value]="((prelims+midterms+finals)/3)" placeholder="99" disabled readonly/>
+            <label for="average">Average</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,107 @@
+<div class="container">
+  <div class="row align-items-start">
+    <h1>Data Binding in Angular</h1><hr>
+    <div class="col">
+      <p class="lead">One-Way Data Binding</p>
+      <!-- Interpolation -->
+      <p class="fw-bold">
+        1. Interpolation
+      </p>
+      <div class="content">
+        <p>This is an example of <em>{{string}}</em>. <br/>
+          You can also interpolate numbers: <em>{{123456789}}</em>.
+        </p>
+      </div>
+      <!-- Property Binding -->
+      <p class="fw-bold">
+        2. Property Binding
+      </p>
+      <div class="content d-inline-flex">
+        <p>Bind data using the</p>
+        <div class="propertyStyle">
+          <input type="text" class="form-control" 
+          [value]="property" readonly/>
+        </div>
+        <p> of an element.</p>
+      </div>
+      <!-- Style Binding -->
+      <p class="fw-bold">
+        3. Style Binding
+      </p>
+      <div class="content">
+        <p [style]="colorstyle">
+          The color style of this text was styled using style binding.
+        </p>
+        <p [style.color]="myColor">
+          You can also bind the style by using this syntax [style.color]="myColor".
+        </p>
+      </div>
+      <!-- Class Binding -->
+      <p class="fw-bold">
+        4. Class Binding
+      </p>
+      <div class="content">
+        <p [class]="appliedCSS">
+          This line applied the bootstrap paragraph lead class using class binding.
+        </p>
+      </div>
+      <!-- Binding Images -->
+      <p class="fw-bold">
+        5. Binding Images
+      </p>
+      <div class="content d-flex flex-row">
+        <img src={{imageURL}}/>
+        <p style="margin:1rem">Display the image using Interpolation</p>
+        <img [src]="imageURL"/>
+        <p style="margin:1rem">Or by using Property Binding</p>
+      </div>
+    </div>
+    <div class="col border-start">
+      <p class="lead">Two-Way Data Binding</p>
+      <p><em>For us to validate the event for the following items, a console.log
+        should be opened by pressing F12 and going to Console tab beside the Element tab.</em>
+      </p>
+      <!-- Event Binding -->
+      <p class="fw-bold">
+        1. Event Binding
+      </p>
+      <div class="content">
+        <p style="margin:0">Pressing the button will show result on console.log</p>
+        <button (click)="showData($event)" class="btn btn-outline-dark mb-3">
+          (click)
+        </button>
+        <p style="margin:0">Pressing the button as well for this, produce the same result.</p>
+        <button on-click="showData($event)" class="btn btn-outline-dark mb-3">
+          on-click
+        </button>
+      </div>
+      <p class="fw-bold">
+        2. Event Binding 2
+      </p>
+      <div class="content">
+        <p><em>This events will get data. Check the console for the result.</em></p>
+        <!-- Keyup -->
+        <p style="margin:0"><b>Keyup</b> will only record the input when the key press was released.</p>
+        <input type="text" #keyupbox placeholder="keyup box" 
+        (keyup)="getData(keyupbox.value)" class="form-control mb-3"/>
+        <!-- Keyinput -->
+        <p style="margin:0"><b>Keyinput</b> will record data each time there's input.</p>
+        <input type="text" #keyinputbox placeholder="input box" 
+        (input)="getData(keyinputbox.value)" class="form-control mb-3"/>
+        <!-- Keydown -->
+        <p style="margin:0"><b>Keydown</b> will record data just like keyinput, but will start with a 0 (blank).</p>
+        <input type="text" #keydownbox placeholder="keydown box" 
+        (keydown)="getData(keydownbox.value)" class="form-control mb-3"/>
+        <!-- Keyblur -->
+        <p style="margin:0"><b>Keyblur</b> only records data when an event was made outside the element.</p>
+        <input type="text" #keyblurbox placeholder="blur box" 
+        (blur)="getData(keyblurbox.value)" class="form-control mb-3"/>
+      </div>
+    </div>
+  <!-- Footer Section -->
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+    </ul>
+    <p class="text-center text-muted">&copy; 2022 - Katrine Joy Dela Cruz</p>
+  </footer>
+</div>
