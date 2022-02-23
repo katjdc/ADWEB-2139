@@ -1,0 +1,63 @@
+<div class="container-fluid fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top fixed-top">
+    <div class="container">
+      <a class="navbar-brand" id="user" href="#">kat.</a>
+      <button class="navbar-toggler end-100" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbar">
+        <div class="navbar-nav">
+          <a class="nav-link mod-links h3" aria-current="page" href="#about">about</a>
+          <a class="nav-link mod-links h3" href="#skills">skills</a>
+          <a class="nav-link mod-links h3" href="#portfolio">portfolio</a>
+          <a class="nav-link mod-links h3" href="#contact">contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+<div class="container" id="about">
+  <div class="hero">
+    <div class="container whitespace">
+      <div class="row">
+        <div class ="col mx-auto d-block">
+          <div class="profile-card">
+            <img src="assets/kat.png" class="img-fluid">
+          </div>
+        </div>
+        <div class ="col mx-auto d-block d-flex align-items-center">
+          <div class="d-flex flex-column bd-highlight mb-3">
+            <div>
+              <h1 class="display-3" id="profile-heading">Hello, I'm Katrine Joy Dela Cruz.</h1>
+            </div>
+            <div>
+              <p class="lead">
+                A Web Developer student based in Pampanga, Philippines.
+              </p>
+            </div>
+            <div>
+              <button type="button" class="btn btn-outline-dark">
+                Contact Me
+              </button>
+              <button type="button" class="btn btn-dark ms-2">
+                Know More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+  <div class="section container-fluid">
+    <div class="container">
+      <div class="section-container">
+        <app-about></app-about>
+        <app-skills></app-skills>
+        <app-portfolio></app-portfolio>
+        <app-contact></app-contact>
+      </div>
+    </div>
+  </div>
+</div>
