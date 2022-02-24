@@ -25,7 +25,6 @@ body {
 }
 .whitespace {
   margin-top: 3rem;
-  margin-bottom: 3rem;
 }
 /* CONTENT CARDS */
 .profile-card {
@@ -50,9 +49,6 @@ body {
 .section-container {
   padding: 5rem;
 }
-.section {
-  background-color: rgba(248,247,242,255);
-}
 #tech-stacks {
   font-weight: 500;
   font-size: 1.5rem;
@@ -66,14 +62,10 @@ body {
   margin-top: 50px;
 }
 .list-group .list-group-item {
-  background-color: rgba(248,247,242,255);
   border: 0;
 }
 .contact-details {
   font-weight: 700;
-}
-.spacer {
-  padding: 2rem;
 }
 @media screen and (max-width: 576px) {
   .hero {
