@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+.navbar-brand, .nav-link {
+  color: black !important;
+}
+a.nav-link:hover {
+  border-bottom: 1px solid black !important;
+}
+.img-border {
+  width: 25rem; 
+  height: 25rem;
+  top: 5%;
+  left: 18%;
+}
