@@ -7,7 +7,7 @@ import { MyserviceService } from './myservice.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'midterm-demo';
+  title = 'midterms-services-demo';
   todaydate: any;
   componentproperty: any;
   constructor(private myservice:MyserviceService) { }

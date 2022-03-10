@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Httpclient2Service } from '../httpclient2.service';
+import { HttpclientService } from '../httpclient.service';
 
 @Component({
   selector: 'app-httpclient2',
@@ -11,7 +11,7 @@ export class Httpclient2Component implements OnInit {
 
   httpusers: any;
 
-  constructor(private httpclientList:Httpclient2Service) { }
+  constructor(private httpclientList:HttpclientService) { }
 
   ngOnInit(): void {
     //getUsersfromServer is an observable, subscribe to it using the code below
